@@ -17,6 +17,8 @@ void merge(int array[],int front,int mid,int end){
 	int RightArr[lenR];
 	int max=100000;
 	int i,j,k;
+	
+//	Copy origin array to LeftArr and RightArr
 	for(i=0;i<lenL;i++){
 		LeftArr[i] = array[front+i];
 	} 
@@ -28,6 +30,7 @@ void merge(int array[],int front,int mid,int end){
 	RightArr[j] = max;
 	i=0;j=0;
 	
+//	Check the size of the number and sort from small to large
 	for(k=front;k<=end;k++){
 		if(LeftArr[i] <= RightArr[j]) array[k]=LeftArr[i++];
 		else array[k]=RightArr[j++];
